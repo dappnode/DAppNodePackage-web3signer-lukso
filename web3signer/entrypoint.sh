@@ -5,7 +5,7 @@ export NETWORK="lukso"
 export WEB3SIGNER_API="http://web3signer.web3signer-${NETWORK}.dappnode:9000"
 
 # Assign proper value to LUKSO_DAPPNODE_GLOBAL_CONSENSUS_CLIENT_LUKSO. The UI uses the web3signer domain in the Header "Host"
-case "$LUKSO_DAPPNODE_GLOBAL_CONSENSUS_CLIENT_LUKSO" in
+case "$_DAPPNODE_GLOBAL_CONSENSUS_CLIENT_LUKSO" in
 "prysm-${NETWORK}.dnp.dappnode.eth")
   ETH2_CLIENT_DNS="validator.prysm-${NETWORK}.dappnode"
   export BEACON_NODE_API="http://beacon-chain.prysm-${NETWORK}.dappnode:3500"
@@ -42,7 +42,7 @@ case "$LUKSO_DAPPNODE_GLOBAL_CONSENSUS_CLIENT_LUKSO" in
   export CLIENTS_TO_REMOVE=(teku lighthouse prsym nimbus)
   ;;
 *)
-  echo "LUKSO_DAPPNODE_GLOBAL_CONSENSUS_CLIENT_LUKSO env is not set properly"
+  echo "_DAPPNODE_GLOBAL_CONSENSUS_CLIENT_LUKSO env is not set properly"
   exit 1
   ;;
 esac
