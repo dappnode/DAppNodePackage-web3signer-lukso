@@ -1,5 +1,3 @@
-<!-- :female_detective: Looking for a new champion -->
-
 # DAppNode Package _Web3signer-Lukso_
 
 <!--DAppNode package logo (could be added with an hyperlink to a youtube video): -->
@@ -27,22 +25,5 @@ Rquirements to run The DAppNode Web3Signer-Lukso
 <!--Requirements to run the Dappnode package in a list: -->
 
 - **Validator**: Set up your validator at https://deposit.mainnet.lukso.network
-- **Execution Layer Client**: You need to have installed and synced an EL client such as Göerli Geth, Göerli Nethermind, Göerli Erigon, or Göerli Besu
-- **Consensus Layer Client**: You need to have installed and synced a CL client such as Prysm Lukso, Lighthouse Lukso, Lodestar Lukso, Nimbus Lukso, or Teku Lukso
-
-### Manteinance
-
-<!--Table with champion/s mantainers, versions and update status -->
-<!--UPDATED: :x: OR :heavy_check_mark: -->
-
-|      Updated       |   Champion/s   |
-| :----------------: | :------------: |
-| :heavy_check_mark: | @pablomendez95 |
-
-### Development
-
-Build the development binary of the web3signer. Also uses the latest postgresql scripts defined at https://github.com/ConsenSys/web3signer/tree/master/slashing-protection/src/main/resources/migrations/postgresql
-
-```
-npx @dappnode/dappnodesdk build --compose_file_name=docker-compose.dev.yml
-```
+- **Execution Layer Client**: You need to have installed and synced an EL client such as Lukso Geth
+- **Consensus Layer Client**: You need to have installed and synced a CL client such as Prysm Lukso
