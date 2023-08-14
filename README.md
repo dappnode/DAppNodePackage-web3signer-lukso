@@ -1,6 +1,4 @@
-# DAppNode Package _Web3signer-Lukso_
-
-<!--DAppNode package logo (could be added with an hyperlink to a youtube video): -->
+# DAppNode Package _Web3signer-LUKSO_
 
 ![](node-avatar.png)
 
@@ -20,10 +18,10 @@ Client diversity is a key benefit of DAppNode, with our implementation of Consen
 
 ### Requirements
 
-Rquirements to run The DAppNode Web3Signer-Lukso
+Rquirements to run The DAppNode Web3Signer-LUKSO
 
 <!--Requirements to run the Dappnode package in a list: -->
 
 - **Validator**: Set up your validator at https://deposit.mainnet.lukso.network
-- **Execution Layer Client**: You need to have installed and synced an EL client such as Lukso Geth
-- **Consensus Layer Client**: You need to have installed and synced a CL client such as Prysm Lukso
+- **Execution Layer Client**: You need to have installed and synced an EL client such as LUKSO Geth
+- **Consensus Layer Client**: You need to have installed and synced a CL client such as Prysm LUKSO
