@@ -25,7 +25,7 @@ services:
     build:
       context: web3signer
       args:
-        UPSTREAM_VERSION: 23.8.1
+        UPSTREAM_VERSION: 23.9.0
     environment:
       EXTRA_OPTS: ""
     volumes:
@@ -36,7 +36,7 @@ services:
     build:
       context: flyway
       args:
-        UPSTREAM_VERSION: 23.8.1
+        UPSTREAM_VERSION: 23.9.0
     depends_on:
       postgres:
         condition: service_started
@@ -46,7 +46,7 @@ services:
     build:
       context: postgres
       args:
-        UPSTREAM_VERSION: 23.8.1
+        UPSTREAM_VERSION: 23.9.0
     user: postgres
     volumes:
       - "postgres_data:/var/lib/postgresql/data"
