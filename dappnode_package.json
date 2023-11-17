@@ -29,14 +29,13 @@
   },
   "license": "Apache-2.0",
   "requirements": {
-    "minimumDappnodeVersion": "0.2.77"
+    "minimumDappnodeVersion": "0.2.84"
   },
   "globalEnvs": [
     {
       "envs": [
         "CONSENSUS_CLIENT_LUKSO",
-        "EXECUTION_CLIENT_LUKSO",
-        "FEE_RECIPIENT_LUKSO"
+        "EXECUTION_CLIENT_LUKSO"
       ],
       "services": ["brain"]
     },
