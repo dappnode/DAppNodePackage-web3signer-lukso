@@ -6,5 +6,6 @@ USER root
 COPY entrypoint.sh /usr/bin/entrypoint.sh
 
 #USER web3signer
+ENV JAVA_OPTS="-Xmx4g -Xms128m"
 EXPOSE 9000
 ENTRYPOINT /bin/bash /usr/bin/entrypoint.sh
