@@ -1,15 +1,17 @@
 ##############
 # MIGRATIONS #
 ##############
-FROM debian:bullseye-slim as postgres-migrations
+FROM alpine:3.15.10 as postgres-migrations
 ARG UPSTREAM_VERSION
 WORKDIR /usr/src/app
 
-RUN apt update && apt install -y wget
-# Get migrations from consensys web3signer repo
-# path is /usr/src/app/web3signer-21.10.0/slashing-protection/src/main/resources/migrations/postgresql
+# Install wget and other dependencies, if necessary
+RUN apk --no-cache add wget
+
+# Get migrations from ConsenSys web3signer repository
 RUN wget -q https://github.com/ConsenSys/web3signer/archive/refs/tags/${UPSTREAM_VERSION}.tar.gz && \
-    tar -xvf ${UPSTREAM_VERSION}.tar.gz
+    tar -xvf ${UPSTREAM_VERSION}.tar.gz && \
+    rm ${UPSTREAM_VERSION}.tar.gz
 
 ############
 # POSTGRES #
@@ -17,10 +19,12 @@ RUN wget -q https://github.com/ConsenSys/web3signer/archive/refs/tags/${UPSTREAM
 FROM postgres:14.1-bullseye
 
 ARG UPSTREAM_VERSION
-ENV POSTGRES_PASSWORD=password
-ENV PGPASSWORD=password
-ENV POSTGRES_USER=postgres
-ENV POSTGRES_DB=web3signer
+
+ENV POSTGRES_PASSWORD=password \
+    PGPASSWORD=password \
+    POSTGRES_USER=postgres \ 
+    POSTGRES_DB=web3signer \
+    INITDB_DIR=/docker-entrypoint-initdb.d/
 
 RUN apt update && apt install -y rename
 
