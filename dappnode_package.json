@@ -1,7 +1,7 @@
 {
   "name": "web3signer-lukso.dnp.dappnode.eth",
-  "version": "0.1.1",
-  "upstreamVersion": "23.11.0",
+  "version": "0.1.2",
+  "upstreamVersion": "24.1.0",
   "architectures": ["linux/amd64"],
   "upstreamRepo": "ConsenSys/web3signer",
   "mainService": "web3signer",
@@ -33,10 +33,7 @@
   },
   "globalEnvs": [
     {
-      "envs": [
-        "CONSENSUS_CLIENT_LUKSO",
-        "EXECUTION_CLIENT_LUKSO"
-      ],
+      "envs": ["CONSENSUS_CLIENT_LUKSO", "EXECUTION_CLIENT_LUKSO"],
       "services": ["brain"]
     },
     {
