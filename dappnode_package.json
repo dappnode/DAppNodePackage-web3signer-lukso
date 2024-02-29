@@ -29,7 +29,10 @@
   },
   "license": "Apache-2.0",
   "requirements": {
-    "minimumDappnodeVersion": "0.2.77"
+    "minimumDappnodeVersion": "0.2.89"
+  },
+  "optionalDependencies": {
+    "prysm-lukso.dnp.dappnode.eth": "0.1.1"
   },
   "globalEnvs": [
     {
