@@ -32,7 +32,8 @@
     "minimumDappnodeVersion": "0.2.89"
   },
   "optionalDependencies": {
-    "prysm.dnp.dappnode.eth": "0.1.1"  },
+    "prysm-lukso.dnp.dappnode.eth": "0.1.1"
+  },
   "globalEnvs": [
     {
       "envs": ["CONSENSUS_CLIENT_LUKSO", "EXECUTION_CLIENT_LUKSO"],
